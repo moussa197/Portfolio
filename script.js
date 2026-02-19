@@ -50,7 +50,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe sections
-document.querySelectorAll('.section-header, .about-content, .skills-container, .projects-container, .contact-container').forEach(el => {
+document.querySelectorAll('.section-header, .about-content, .skills-container, .github-container, .projects-container, .contact-container').forEach(el => {
     observer.observe(el);
 });
 
@@ -72,6 +72,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
+        }
+    });
+});
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 200;
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
         }
     });
 });
