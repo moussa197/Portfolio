@@ -1,3 +1,17 @@
+// Toast alternance
+const toast = document.getElementById('toast-alternance');
+const toastClose = document.getElementById('toast-close');
+
+function hideToast() {
+    toast.classList.add('hiding');
+    setTimeout(() => { toast.style.display = 'none'; }, 400);
+}
+
+toastClose.addEventListener('click', hideToast);
+
+// Auto-close après la barre de progression (8s + 2.1s delay)
+setTimeout(hideToast, 10100);
+
 // Navigation scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
