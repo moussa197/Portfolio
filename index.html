@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Animated background orbs -->
+    <div class="bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="orb orb-4"></div>
+    </div>
+
     <!-- Toast alternance -->
     <div class="toast-alternance" id="toast-alternance">
       <div class="toast-pulse"></div>
@@ -89,11 +97,14 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-badge">
-            <i class="fas fa-hand-wave"></i> Bienvenue sur mon portfolio
+            <span class="badge-dot"></span> Disponible · Open to work
           </div>
           <h1>
-            Je suis <span class="gradient-text">Moussa Keita</span><br />
-            Développeur Full Stack & IA
+            <span class="hero-name gradient-text">Moussa Keïta</span>
+            <span class="hero-role"
+              ><span id="typewriter"></span
+              ><span class="typewriter-cursor">|</span></span
+            >
           </h1>
           <p class="hero-description">
             Étudiant passionné en Bachelor Pro Informatique & Intelligence
@@ -123,45 +134,43 @@
             technologies
           </p>
         </div>
-
         <div class="about-content">
-          <div class="about-text">
-            <h3>Un développeur passionné et polyvalent</h3>
-            <p>
-              Actuellement en Bachelor Pro Informatique & Intelligence
-              Artificielle, je me spécialise dans le développement web moderne
-              et les technologies d'IA. Ma polyvalence me permet d'intervenir
-              sur l'ensemble du stack technologique, du front-end au back-end,
-              en passant par la conception de bases de données.
-            </p>
-            <p>
-              Ma capacité d'adaptation rapide et mon esprit d'équipe me
-              permettent de m'intégrer efficacement dans tout environnement de
-              développement. Je suis constamment à l'affût des nouvelles
-              technologies et des meilleures pratiques pour créer des solutions
-              innovantes et performantes.
-            </p>
+          <!-- Image LEFT -->
+          <div class="about-image"><img src="Killua Zoldyck.jpg" /></div>
+
+          <!-- Content RIGHT -->
+          <div class="about-right">
+            <div class="about-bio-card">
+              <p>
+                Développeur Full Stack passionné par l'innovation, je crée des
+                <span class="hl-cyan">applications exceptionnelles</span> qui
+                fusionnent esthétique et performance.
+              </p>
+              <p>
+                Mon expertise s'étend du frontend au backend. Je transforme
+                la complexité en simplicité grâce à des solutions
+                <span class="hl-violet">performantes et élégantes</span>.
+              </p>
+            </div>
             <div class="stats-grid">
-              <div class="stat-item">
-                <div class="stat-number">-1</div>
-                <div class="stat-label">Années d'expérience</div>
-              </div>
-              <div class="stat-item">
+              <div class="stat-item stat-orange">
                 <div class="stat-number">5+</div>
                 <div class="stat-label">Projets réalisés</div>
               </div>
-              <div class="stat-item">
+              <div class="stat-item stat-cyan">
                 <div class="stat-number">5+</div>
                 <div class="stat-label">Technologies</div>
               </div>
-              <div class="stat-item">
+              <div class="stat-item stat-violet">
+                <div class="stat-number">-1</div>
+                <div class="stat-label">Années d'exp.</div>
+              </div>
+              <div class="stat-item stat-rose">
                 <div class="stat-number">100%</div>
                 <div class="stat-label">Passion</div>
               </div>
             </div>
           </div>
-
-          <div class="about-image"><img src="Killua Zoldyck.jpg" /></div>
         </div>
       </div>
     </section>
