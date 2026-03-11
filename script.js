@@ -74,14 +74,23 @@ document
     observer.observe(el);
   });
 
-// Form submission
+// Form submission + confirm popup
 const form = document.getElementById("form-contact");
+const confirmOverlay = document.getElementById("confirm-overlay");
+const confirmClose = document.getElementById("confirm-close");
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  alert(
-    "Merci pour votre message ! Je vous répondrai dans les plus brefs délais.",
-  );
   form.reset();
+  confirmOverlay.classList.add("show");
+});
+
+confirmClose.addEventListener("click", () => {
+  confirmOverlay.classList.remove("show");
+});
+
+confirmOverlay.addEventListener("click", (e) => {
+  if (e.target === confirmOverlay) confirmOverlay.classList.remove("show");
 });
 
 // Smooth scroll

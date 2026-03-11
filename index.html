@@ -115,7 +115,7 @@
             <a href="#projects" class="btn btn-primary"
               >Découvrir mes projets</a
             >
-            <a href="CV_Moussa_Keita.pdf" download class="btn btn-cv">
+            <a href="CV ALTERANCE.pdf" download class="btn btn-cv">
               <i class="fas fa-download"></i> Télécharger mon CV
             </a>
           </div>
@@ -147,8 +147,8 @@
                 fusionnent esthétique et performance.
               </p>
               <p>
-                Mon expertise s'étend du frontend au backend. Je transforme
-                la complexité en simplicité grâce à des solutions
+                Mon expertise s'étend du frontend au backend. Je transforme la
+                complexité en simplicité grâce à des solutions
                 <span class="hl-violet">performantes et élégantes</span>.
               </p>
             </div>
@@ -421,22 +421,20 @@
           </div>
 
           <div class="contact-form">
-            <form id="form-contact">
+            <form id="form-contact" action="https://formspree.io/f/xqeyqwoz" method="POST">
               <div class="form-group">
-                <label for="name">Nom complet</label>
-                <input type="text" id="name" name="name" required />
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required />
               </div>
               <div class="form-group">
-                <label for="email">Adresse email</label>
-                <input type="email" id="email" name="email" required />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com" required />
               </div>
               <div class="form-group">
-                <label for="message">Votre message</label>
-                <textarea id="message" name="message" required></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
               </div>
-              <button type="submit" class="submit-btn">
-                Envoyer le message
-              </button>
+              <button type="submit" class="submit-btn">Envoyer le message</button>
             </form>
           </div>
         </div>
@@ -449,6 +447,18 @@
         <p>&copy; 2026 Moussa Keita. Tous droits réservés.</p>
       </div>
     </footer>
+
+    <!-- Popup confirmation envoi -->
+    <div class="confirm-overlay" id="confirm-overlay">
+      <div class="confirm-modal">
+        <div class="confirm-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3>Message envoyé !</h3>
+        <p>Merci pour ton message. Je te répondrai dans les plus brefs délais.</p>
+        <button class="confirm-close" id="confirm-close">Fermer</button>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
